@@ -14,7 +14,9 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">ARCIII<span>-Architecture Studio</span> </div>
+                <div class="logo">
+                    <a class="logo-button" href="index.html#home">ARCIII<span>-Architecture Studio</span></a>
+                </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -32,6 +34,11 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="background-video">
+            <video autoplay loop>
+                <source src="Assets/Exterior/Heang/OrnDancing.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="hero-content">
             <h1>Creating Beautiful Spaces</h1>
             <p>From stunning interiors to breathtaking landscapes, we design comprehensive environments that transform your vision into beautiful, functional reality.</p>
@@ -62,7 +69,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Design Studio">
+                    <img src="Assets/Interiors/Kimlong/Dinning Room.jpg" alt="Design Studio">
                 </div>
             </div>
         </div>
@@ -165,7 +172,7 @@
                 </div>
             </div>
             <div class="view-all">
-                <a href="#" class="btn">View All Projects →</a>
+                <button><a href="view-all-project-page2.html" class="btn">View All Projects →</a></button>
             </div>
         </div>
     </section>
@@ -355,6 +362,13 @@
         </div>
     </footer>
 
+    
     <script src="script.js"></script>
+    <script>
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
+
 </body>
 </html>

@@ -63,6 +63,14 @@ nav {
     color: var(--primary);
 }
 
+.logo-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary);
+}
+
 .logo span {
     color: var(--secondary);
 }
@@ -95,9 +103,19 @@ nav {
 }
 
 /* Hero Section */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     background-size: cover;
     background-position: center;
     display: flex;
