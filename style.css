@@ -559,7 +559,7 @@ footer {
 }
 
 .footer-column p, .footer-column i {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .footer-column a:hover {
@@ -650,6 +650,7 @@ footer {
         height: 300px;
     }
 
+    
     /* Adjust Texts Link Color */
 
 
