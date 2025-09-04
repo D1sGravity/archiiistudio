@@ -19,44 +19,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling (fixed for Formspree)
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // prevent default page reload
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('Thank you for your message! We will get back to you soon.');
-            form.reset();
-        } else {
-            alert('Oops! There was a problem submitting your form.');
-        }
-    })
-    .catch(error => {
-        alert('Oops! There was a problem submitting your form.');
-        console.error(error);
-    });
-});
-
-// Header background change on scroll
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.background = '#fff';
-        header.style.boxShadow = 'none';
-    }
-});
-
 // Mobile menu toggle
 document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
     document.querySelector('.nav-links').classList.toggle('active');
@@ -102,17 +64,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Listen for scroll events
 window.addEventListener('scroll', animateOnScroll);
-
-// Dropdown menu functionality for Mobile User
-document.addEventListener("DOMContentLoaded", function () {
-  // Get all dropdown parents (the <li> with submenu)
-  const dropdownParents = document.querySelectorAll("ul li:has(ul.dropdown-options)");
-
-  dropdownParents.forEach(parent => {
-    parent.addEventListener("click", function (e) {
-      e.preventDefault(); // stop link default behavior if any
-      this.querySelector("ul.dropdown-options").classList.toggle("show");
-    });
-  });
-});
-

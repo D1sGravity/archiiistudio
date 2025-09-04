@@ -52,7 +52,7 @@ header {
     top: 0;
     z-index: 1000;
     padding: 15px 0;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 1.5s, box-shadow 0.3s;
     gap: 15px;
 }
 
@@ -64,7 +64,34 @@ nav {
     
 }
 
+ul li ul.dropdown-options {
+    list-style-type: none;
+    width: 210px;
+    background: rgba(224, 224, 224, 0.72) ;
+    color: var(--primary);
+    position: absolute;
+    z-index: 999;
+    display: none;
+    text-align: flexible;
+}
 
+ul li a:hover {
+    background:  none;
+}
+
+ul li:hover ul.dropdown-options{
+    display: block;
+    background:  rgba(235, 235, 235 0.8);
+}
+
+.btn-dropdown-options {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 14px;
+    margin-left: 5px;
+}
 
 .logo  {
     font-family: 'Playfair Display', serif;
@@ -651,7 +678,8 @@ footer {
     }
 
     
-    /* Adjust Texts Link Color */
+    /* Adjust Texts, Link, drop-down, Color, nav, etc... */
+   
 
 
 
