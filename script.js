@@ -19,11 +19,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
+// Form submission handling (fixed for Formspree)
 document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    this.reset();
+    e.preventDefault(); // prevent default page reload
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Thank you for your message! We will get back to you soon.');
+            form.reset();
+        } else {
+            alert('Oops! There was a problem submitting your form.');
+        }
+    })
+    .catch(error => {
+        alert('Oops! There was a problem submitting your form.');
+        console.error(error);
+    });
 });
 
 // Header background change on scroll
