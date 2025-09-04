@@ -86,9 +86,8 @@ ul li:hover ul.dropdown-options{
 
 .btn-dropdown-options {
     background: none;
-    border: none;
-    cursor: pointer;
     color: var(--primary);
+    border: none;
 }
 
 .logo  {
