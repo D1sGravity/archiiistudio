@@ -219,55 +219,59 @@
             </div>
             <div class="contact-content">
                 <div class="contact-form">
-                    <form id="contactForm" form action="https://formspree.io/f/yourformid" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" placeholder="John" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" placeholder="Doe" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" placeholder="+855 (0) 12-345-678">
-                        </div>
-                        <div class="form-group">
-                            <label for="projectType">Project Type</label>
-                            <select id="projectType" required>
-                                <option value="">Select project type</option>
-                                <option value="interior">Interior Design</option>
-                                <option value="exterior">Exterior Design</option>
-                                <option value="landscape">Landscape Design</option>
-                                <option value="courtyard">Courtyard Design</option>
-                                <option value="backyard">Backyard Design</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="We accept both small and big projects. &#10;Example : Interior, bedroom 10mx10m or sqm 100m²" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+                <form id="contactForm" action="https://formspree.io/f/yourformid" method="POST">
+                    <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+855 (0) 12-345-678">
+                    </div>
+                    <div class="form-group">
+                    <label for="projectType">Project Type</label>
+                    <select id="projectType" name="projectType" required>
+                        <option value="">Select project type</option>
+                        <option value="interior">Interior Design</option>
+                        <option value="exterior">Exterior Design</option>
+                        <option value="landscape">Landscape Design</option>
+                        <option value="courtyard">Courtyard Design</option>
+                        <option value="backyard">Backyard Design</option>
+                        <option value="other">Other</option>
+                    </select>
+                    </div>
+                    <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="We accept both small and big projects. &#10;Example : Interior, bedroom 10mx10m or sqm 100m²" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
                 </div>
+
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                             <div class="location-link-text-color">
                                 <h4>Address</h4>
-                                <p><a href="https://maps.app.goo.gl/sdBFb7dtkwnDtbw5A" target="_blank" rel="noopener" rel="noreferrer" style="text-decoration: underline; color: #555;"> Mall 271<br>Phnom Penh, Cambodia</a></p>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4851.114915341022!2d104.923723!3d11.523276000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDMxJzIzLjgiTiAxMDTCsDU1JzI1LjQiRQ!5e1!3m2!1sen!2skh!4v1756963351114!5m2!1sen!2skh" width="300" height="200" 
-                                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                    </div>
+                                <p><a href="https://maps.app.goo.gl/sdBFb7dtkwnDtbw5A" target="_blank" rel="noopener" rel="noreferrer" 
+                                    style="text-decoration: underline; color: #555;"> Chip Mong 271 Mega Mall<br>Phnom Penh, Cambodia</a></p>
+
+                <!-- Google Map Embed -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4851.114915341022!2d104.923723!3d11.523276000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDMxJzIzLjgiTiAxMDTCsDU1JzI1LjQiRQ!5e1!3m2!1sen!2skh!4v1756963351114!5m2!1sen!2skh" width="300" height="200" 
+                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
 
                     <div class="info-item">
                         <i class="fa-brands fa-telegram"></i>
