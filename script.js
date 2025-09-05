@@ -103,16 +103,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // Listen for scroll events
 window.addEventListener('scroll', animateOnScroll);
 
-// Dropdown menu functionality for Mobile User
+// Dropdown menu functionality for Mobile User (fixed)
 document.addEventListener("DOMContentLoaded", function () {
-  // Get all dropdown parents (the <li> with submenu)
   const dropdownParents = document.querySelectorAll("ul li:has(ul.dropdown-options)");
 
   dropdownParents.forEach(parent => {
     parent.addEventListener("click", function (e) {
-      e.preventDefault(); // stop link default behavior if any
-      this.querySelector("ul.dropdown-options").classList.toggle("show");
+      // Only block default if NOT clicking an <a>
+      if (e.target.tagName !== "A") {
+        e.preventDefault();
+        this.querySelector("ul.dropdown-options").classList.toggle("show");
+      }
     });
   });
 });
-
