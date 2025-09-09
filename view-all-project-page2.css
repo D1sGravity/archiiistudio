@@ -131,36 +131,38 @@ nav {
 /* ...Projects-container-responsive... */
     
             /*...Destop...*/
-            @media (max-width: 768px) {
+            @media (max-width: 900px) {
+            .projects-container {
+                grid-template-areas: 
+                 "container"
+                 "project-menu-bar-card"
+                 "projects-container" ;
+            }
             .projects-container {
                 display: flex;
-                position: relative;
-                top: 100%;
-                left: 0;
-                width: 100%;
                 flex-direction: column;
-                padding: 80px;
+                
             }
-            } 
-            
-            /*...Tablet...*/
+                
+            }
 
-            /*...Mobile...*/
+                /*...Mobile...*/
 
     /*...1.Project Header Options...*/
     .project-menu-bar-card {
         width: 100%;
-        margin : 20px auto 0 auto;
+        margin : 5px auto 0 auto;
 
-        background-color: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, 150px);
 
         padding-top: 75px;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
 
         justify-content: center;
         gap: 20px;
+
+        background-color: rgba(170, 190, 253, 0.5);                      /*1. background color */
     }
 
     .project-selection {
@@ -176,9 +178,9 @@ nav {
     .project-button-2,
     .project-button-3 {
         color: #2c3e50;
-        border: 1px solid rgba(131, 131, 131, 0.459);
+        border: 1px solid rgba(196, 196, 196, 0.459);
         border-radius: 10px;
-        box-shadow: 0 10px 15px rgba(131, 131, 131, 0.5);
+        box-shadow: 0 10px 15px rgba(131, 131, 131, 0.2);
         cursor: pointer;
         transition: transform 0.3s;
     }
@@ -197,7 +199,7 @@ nav {
 
     /*...2.CONTAINER START HERE...*/
     .projects-container {
-        width: 85%;
+        width: 100%;
         margin: 10px auto 0 auto;
 
         max-height: fit-content;    /*...Fit project-card (below )...*/
@@ -205,6 +207,8 @@ nav {
         border-radius: 10px;
         border-width: 5px;
         border: 1px solid none;
+        background-color: rgba(255, 178, 178, 0.5);                          /*2. background color */
+        border: 1px solid rgba(255, 0, 0, 0.8);
     }
 
         /*... First-Container...*/
