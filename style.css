@@ -579,7 +579,7 @@ footer {
 }
 
 .footer-column a {
-    display: inline;
+    display: flex;
 }
 
 .footer-column p, .footer-column i {
