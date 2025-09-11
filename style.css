@@ -515,12 +515,14 @@ ul li:hover ul.dropdown-options{
         object-fit: cover;
 
         border: 3px solid rgba(101, 2, 2, 0.8);
+        box-shadow: 0 5px 10px rgba(101, 2, 2, 0.7);
     }
 
     .card-back h3 {                                /*--- University Name ---*/
         font-size: 15px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: rgba(101, 2, 2, 0.7);
+        text-shadow: 0 5px 10px rgba(101, 2, 2, 0.7);
     }
 
     .card-back-name {                              /*--- Studs Name ---*/
