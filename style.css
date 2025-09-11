@@ -405,24 +405,160 @@ ul li:hover ul.dropdown-options{
 }
 
 .team-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .team-member {
+    cursor: pointer;
+    transition: transform 0.3s scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/*--Copy Here From ChatGPT--*/
+.team-member {
+    width: 350px;
+    height: 400px;
+    margin: 0 auto 0 auto;
+    perspective: 1000px;
+
     background-color: #fff;
-    padding: 30px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s;
 }
 
-.team-member:hover {
+    .team-member:hover {
     transform: translateY(-10px);
-}
+    }
 
+    .Inner-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .team-member:hover .Inner-card {
+        transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .card-front p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    .fa-solid.fa-binoculars {                      /*--- Front Icons ---*/
+        position: absolute;
+        color: #628e9c;
+        font-size: 20px;
+        top: 18px;
+        right: 18px;
+        
+    }
+
+
+    .card-front {
+        z-index: 2;
+    }
+
+    /*--Back of the Card--*/
+    .card-back {
+        transform: rotateY(180deg);
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+
+        padding-top: 25px;
+        gap: 10px;
+        background-color: #fff;
+    }
+
+    .rufa-background-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        width: 80%;
+        opacity: 15%;
+        z-index: 0;
+    }
+
+    .team-img-1,
+    .team-img-2,
+    .team-img-3 {
+        width: 75px;
+        height: 75px;
+        margin-left: 25px;
+
+        border-radius: 0 0 50% 50%;                 /*--- Profile back-card border style---*/
+        object-fit: cover;
+
+        border: 3px solid rgba(101, 2, 2, 0.8);
+    }
+
+    .card-back h3 {                                /*--- University Name ---*/
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(101, 2, 2, 0.7);
+    }
+
+    .card-back-name {                              /*--- Studs Name ---*/
+        font-size: 15px;
+        font-style: 200;
+        font-family: 'Bokor', fantasy;
+        margin-right: 25px;
+        text-align: center;
+        padding-left: 20px;
+        color: rgba(101, 2, 2, 0.7);
+    }
+
+    .generation {
+        font-size: 15px;
+        font-family: 'Bokor', fantasy;
+    
+    }
+
+    .team-img-1-below {
+        position: absolute;
+        top: 65%;
+        left: 45%;
+        transform: translate(-50%, -100%);
+
+        text-align: left;
+        font-size: 15px;
+        padding-left: 35px;
+    }
+
+    .team-img-1-below p {
+        text-align: center;
+        
+    }
+
+
+
+
+/*-- Others --*/
 .team-img {
     width: 150px;
     height: 150px;
@@ -430,7 +566,7 @@ ul li:hover ul.dropdown-options{
     object-fit: cover;
     margin: 0 auto 20px;
     border: 5px solid var(--light);
-}
+}s
 
 .team-member h3 {
     font-size: 22px;
@@ -446,6 +582,13 @@ ul li:hover ul.dropdown-options{
 .team-member p {
     color: #555;
 }
+
+
+
+
+
+
+
 
 /* Contact Section */
 .contact {
