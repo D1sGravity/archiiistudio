@@ -475,7 +475,7 @@ ul li:hover ul.dropdown-options{
     width: 350px;
     height: 400px;
     margin: 0 auto 0 auto;
-    perspective: 1000px;
+    perspective: 1200px;
 
     background-color: #fff;
     border-radius: 8px;
@@ -494,6 +494,7 @@ ul li:hover ul.dropdown-options{
         height: 100%;
         transition: transform 0.8s;
         transform-style: preserve-3d;
+        will-change: transform; /* <- tells browser to optimize for transform changes */
     }
 
     .team-member:hover .Inner-card {
@@ -511,6 +512,9 @@ ul li:hover ul.dropdown-options{
         background: #fff;
         padding: 20px;
         text-align: center;
+
+        backface-visibility: hidden; /* must be set */
+        -webkit-backface-visibility: hidden; /* for Safari */
     }
 
     .card-front p {
