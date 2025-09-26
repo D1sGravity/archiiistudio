@@ -126,3 +126,37 @@ cards.forEach(card => {
   });
 });
 
+// language Selection
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'en', includedLanguages: 'en,km', autoDisplay: false },
+    'google_translate_element'
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const options = document.querySelectorAll(".lang-options li");
+  const currentFlag = document.getElementById("current-flag");
+  const currentLang = document.getElementById("current-lang");
+
+  options.forEach(opt => {
+    opt.addEventListener("click", function () {
+      const lang = this.getAttribute("data-lang");
+      currentLang.textContent = this.textContent.trim();
+      currentFlag.src = lang === "en" ? "flag-en.png" : "flag-kh.png";
+
+      // Trigger Google Translate
+      const googleFrame = document.querySelector("iframe.goog-te-menu-frame");
+      if (googleFrame) {
+        const innerDoc = googleFrame.contentDocument || googleFrame.contentWindow.document;
+        const langElements = innerDoc.querySelectorAll(".goog-te-menu2-item span.text");
+        langElements.forEach(el => {
+          if (el.innerText.toLowerCase().indexOf(lang === "km" ? "khmer" : "english") > -1) {
+            el.click();
+          }
+        });
+      }
+    });
+  });
+});
+
