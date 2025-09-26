@@ -789,31 +789,6 @@ footer {
     color: var(--secondary);
 }
 
-.footer-column2 h3{
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: var(--secondary);
-}
-
-.footer-column2 p{
-    color: #ccc;
-    margin-bottom: 10px;
-    display: block;
-    text-decoration: none;
-    transition: color 0.3s;
-
-    margin-bottom: 20px;
-}
-
-.footer-column2 a{
-    color: #ccc;
-    text-decoration: none;
-}
-
-.footer-column2 a:hover {
-    color: var(--secondary);
-}
-
 
 .social-links {
     display: flex;
@@ -902,7 +877,6 @@ footer {
     
     /* Adjust Texts, Link, drop-down, Color, nav, etc... */
    
-
 
 
 
