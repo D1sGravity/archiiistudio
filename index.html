@@ -68,6 +68,24 @@
                     </li>
                     <li><a href="#team">Team</a></li>
                     <li><a href="#contact">Contact</a></li>
+
+                        <!-- Language Selector -->
+                    <li class="lang-switcher">
+                        <button class="current-lang" id="lang-btn">
+                            <i class="fa-solid fa-language" alt="English" id="current-flag" width="20"></i>
+                            <span id="current-lang"> English</span>
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <ul class="lang-options">
+                            <li data-lang="en"><img src="Assets/Z. Others/Language/illustration-uk-flag_53876-18166.jpg" width="20"> English</li>
+                            <li data-lang="km"><img src="Assets/Z. Others/Language/Flag_of_Cambodia.svg.png" width="20"> ភាសាខ្មែរ</li>
+                        </ul>
+                    </li>
+
+                    <!-- Hidden Google Translate element -->
+                    <div id="google_translate_element" style="display:none;"></div>
+                    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
                 </ul>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -166,23 +184,23 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="Assets/Interiors/Kimlong/Dinning Room.jpg" alt="Luxury Master Bedroom">
+                    <img src="Assets/Interiors/Heang/Bedroom/1.png" alt="Luxury Master Bedroom">
                     <div class="project-overlay">
                         <h3>Luxury Master Bedroom</h3>
-                        <p class="location">Beverly Hills Villa</p>
+                        <p class="location">Kompot Hills Villa</p>
                         <p>A sophisticated bedroom design featuring custom furniture, premium materials, and ambient lighting.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80" alt="Elegant Courtyard">
+                    <img src="Assets/Interiors/Kimlong/Dinning Room.jpg" alt="Elegant Dinning Area">
                     <div class="project-overlay">
-                        <h3>Elegant Courtyard</h3>
-                        <p class="location">Urban Townhouse</p>
-                        <p>An intimate courtyard space with sophisticated planters, seating, and architectural details.</p>
+                        <h3>Elegant Dinning Area</h3>
+                        <p class="location">ChipMong 271</p>
+                        <p>An intimate Dinning space with sophisticated planters, seating, and architectural details.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1613494498355-464e19b67a6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Contemporary House Facade">
+                    <img src="Assets/Interiors/Heang/Bedroom/2.png" alt="Contemporary House Facade">
                     <div class="project-overlay">
                         <h3>Contemporary House Facade</h3>
                         <p class="location">Modern Residential Area</p>
@@ -240,7 +258,7 @@
                             <i class="fa-solid fa-info"></i>
                             <img src="Assets/Profile Images/Houng.jpg" alt="HOUNG HEANG" class="team-img">
                             <h3>HOUNG HEANG</h3>
-                            <div class="role">Creative Director</div>
+                            <div class="role">Founder</div>
                             <p>With a passion for innovative design, Houng leads our creative vision across all design disciplines.</p>
                         </div>
                         <!-- Back -->
@@ -249,10 +267,10 @@
                             <img src="Assets/Profile Images/Houng Heang Rufa Uniform 250px.png" alt="HOUNG HEANG" class="team-img-1">
                             <h3>ROYAL UNIVERSITY OF<br> FINE ARTS<br>
                             <span class="card-back-name">ហ៊ួង ហៀង <span class="generation">ជំនាន់ : ៣២</span></h3>
-                            <div class="team-img-1-below">• Graduated 2025
-                                                      <br>• 1 Year Experience
-                                                      <br>• Competition Involved
-                            <p>2021-2025</p></div>
+                            <div class="team-img-1-below">
+                                                      <br>•
+                                                      <br>
+                            <p>         </p></div>
                         </div>
                     </div>
                 </div>
@@ -273,11 +291,11 @@
                             <img src="Assets/Z. Others/RUFA LOGO without background.png" class="rufa-background-logo" alt="rufa logo">
                             <img src="Assets/Profile Images/Long Rufa Uniform 250px.png" alt="LAY KIMLONG" class="team-img-2">
                             <h3>ROYAL UNIVERSITY OF<br> FINE ARTS<br>
-                            <span class="card-back-name">ឡាយ គឹមលុង <span class="generation">ជំនាន់ : ៣២</span></h3>
-                            <div class="team-img-1-below">• Graduated 2025
-                                                      <br>• 1 Year Experience
-                                                      <br>• Site Leadership
-                            <p>2021-2025</p></div>
+                            <span class="card-back-name">ឡាយ គីមឡុង <span class="generation">ជំនាន់ : ៣២</span></h3>
+                            <div class="team-img-1-below">
+                                                      <br>
+                                                      <br>
+                            <p>         </p></div>
                         </div>
                     </div>
                 </div>
@@ -290,8 +308,8 @@
                             <i class="fa-solid fa-info"></i>
                             <img src="Assets/Profile Images/Jane.jpg" alt="HENG VANDYJANE" class="team-img">
                             <h3>HENG VANDY JANE</h3>
-                            <div class="role">Landscape & Exterior Specialist</div>
-                            <p>Jane designs outdoor spaces and facades that balance beauty and function.</p>
+                            <div class="role">Creative Director</div>
+                            <p>With a passion for innovative design, Jane leads our creative vision across all design disciplines.</p>
                         </div>
                         <!-- Back -->
                         <div class="card-back">
@@ -299,10 +317,10 @@
                             <img src="Assets/Profile Images/Jane Rufa Uniform 250px.png" alt="HENG VANDYJANE" class="team-img-3">
                             <h3>ROYAL UNIVERSITY OF<br> FINE ARTS<br>
                             <span class="card-back-name">ហេង វណ្ណឌីចេន <span class="generation">ជំនាន់ : ៣២</span></h3>
-                            <div class="team-img-1-below">• Graduated 2025
-                                                      <br>• 1 Year Experience
-                                                      <br>• Competition Involved
-                            <p>2021-2025</p></div>
+                            <div class="team-img-1-below">
+                                                      <br>
+                                                      <br>
+                            <p>             </p></div>
                         </div>
                     </div>
                 </div>
@@ -351,7 +369,7 @@
                         <option value="landscape">Landscape Design</option>
                         <option value="courtyard">Courtyard Design</option>
                         <option value="backyard">Backyard Design</option>
-                        <option value="other">Other</option>
+                        <option value="other">Others</option>
                     </select>
                     </div>
                     <div class="form-group">
@@ -440,21 +458,23 @@
                 </div>
 
                 <!--Contact Info-->
-                <div class="footer-column">
+                <div class="footer-column2">
                     <h3>Contact Info</h3>
                     <p><i class="fas fa-map-marker-alt"></i>
                     <a href="https://www.google.com/maps/search/11.523276,+104.923723?entry=tts&g_ep=EgoyMDI1MDgzMC4wIPu8ASoASAFQAw%3D%3D&skid=e14f4d18-d12c-4068-809c-2b2e1e2a15b2" 
-                        target="_blank" rel="noopener noreferrer">ChipMong Mall 271</a></p>
-                    <p><i class="fas fa-building"></i> Phnom Penh, Cambodia</a></p>
-                    <p><i class="fa-brands fa-telegram"></i><a href="https://t.me/disgravity" target="_blank" rel="noopener" rel="noreferrer">+855 016-993-554</a></p>
-                    <p><i class="fa-brands fa-telegram"></i><a href="https://t.me/C_meeeee" target="_blank" rel="noopener" rel="noreferrer">+855 060 704 425</a></p>
-                    <p><i class="fa-brands fa-telegram"></i><a href="https://t.me/JaneJane6" target="_blank" rel="noopener" rel="noreferrer">+855 011 692 639</a></p>
-                    <p><i class="fas fa-envelope"></i><a href="https://mail.google.com/mail/u/0/?fs=1&to=arciiistudio@gmail.com&su=Project+Inquiry&body=Hello,+I'm+interested+in+( YOUR+PROJECT )+design.%0APlease+contact+me,+thank+you.&tf=cm" target="_blank" rel="noopener" rel="noreferrer" 
-                                                            >Archiiistudio@gmail.com</p>
+                        target="_blank" rel="noopener noreferrer"> ChipMong Mall 271</a></p>
+                    <p><i class="fas fa-building"></i> Phnom Penh, Cambodia</p>
+                    <p><i class="fa-brands fa-telegram"></i><a href="https://t.me/disgravity" target="_blank" rel="noopener" rel="noreferrer"> +855 016-993-554</a></p>
+                    <p><i class="fa-brands fa-telegram"></i><a href="https://t.me/C_meeeee" target="_blank" rel="noopener" rel="noreferrer"> +855 060 704 425</a></p>
+                    <p><i class="fa-brands fa-telegram"></i><a href="https://t.me/JaneJane6" target="_blank" rel="noopener" rel="noreferrer"> +855 011 692 639</a></p>
+                    <p><i class="fas fa-envelope"></i>
+                        <a href="https://mail.google.com/mail/u/0/?fs=1&to=arciiistudio@gmail.com&su=Project+Inquiry&body=Hello,+I'm+interested+in+
+                        ( YOUR+PROJECT )+design.%0APlease+contact+me,+thank+you.&tf=cm" target="_blank" rel="noopener" rel="noreferrer"> Archiiistudio@gmail.com</p>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2024 ARCIII Architecture Studio. All rights reserved.</p>
+
+            <div class="AAcopyright">
+                <a><p>@ 2024 ARCIII Architecture Studio. All rights reserved.</p></a>
             </div>
         </div>
     </footer>
