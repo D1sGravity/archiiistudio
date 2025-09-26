@@ -162,7 +162,7 @@ nav {
         justify-content: center;
         gap: 20px;
 
-        background-color: rgba(170, 190, 253, 0.5);                      /*1. background color */
+        background-color: rgba(0);                      /*1. background color */
     }
 
     .project-selection {
@@ -192,21 +192,24 @@ nav {
         transform: scale(1.02);
     }
 
-
+    .project-button-2 ul li{
+        display: hidden;
+    }
 
 
     /*...2.CONTAINER START HERE...*/
     .projects-container {
         width: 100%;
-        margin: 10px auto 0 auto;
+        margin: 0 auto 0 auto;
 
         max-height: fit-content;    /*...Fit project-card (below )...*/
 
         border-radius: 10px;
         border-width: 5px;
         border: 1px solid none;
-        background-color: rgba(255, 178, 178, 0.5);                          /*2. background color */
-        border: 1px solid rgba(255, 0, 0, 0.8);
+        background-color: rgba(0);                          /*2. background color */
+        border: 1px solid rgba(0);
+        
     }
 
         /*... First-Container...*/
@@ -217,8 +220,9 @@ nav {
             
             gap: 10px;
             justify-content: center;
-            padding: 18px 100px;
+            padding: 21px 100px;
             background-color: none;
+            
         }
 
         .project-background {

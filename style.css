@@ -759,8 +759,9 @@ footer {
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    margin-bottom: 40px;
+    
+    grid-column-gap: 30px;
+    margin-bottom: 40px;   
 }
 
 .footer-column h3 {
@@ -769,7 +770,8 @@ footer {
     color: var(--secondary);
 }
 
-.footer-column p, .footer-column a {
+.footer-column p, 
+.footer-column a {
     color: #ccc;
     margin-bottom: 10px;
     display: block;
@@ -777,9 +779,6 @@ footer {
     transition: color 0.3s;
 }
 
-.footer-column a {
-    display: flex;
-}
 
 .footer-column p, .footer-column i {
     margin-right: 10px;
