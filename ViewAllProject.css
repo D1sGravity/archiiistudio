@@ -218,24 +218,23 @@ nav {
     .project-button-2 {
         position: relative; /* Ensure dropdown is positioned relative to this */
     }
-    
-    .project-button-1 :hover
-    .project-button-2 :hover,
-    .project-button-3 :hover {
-        color: #628e9c;
-    }
+
     .project-1-option,
     .project-2-option,
     .project-3-option {
         text-decoration: none;
         color: #2c3e50;
     }
+    .project-button-1 :hover,
+    .project-button-2 :hover,
+    .project-button-3 :hover {
+        color: #628e9c;
+    }
 
     .dropdown-options {
         list-style-type: none;
         text-align: left;
         font-size: 15px;
-
     }
 
     /*--Project Option Hover--*/
