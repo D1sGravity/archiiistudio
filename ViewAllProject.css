@@ -185,7 +185,7 @@ nav {
         background-color: rgba(0,0,0,0);                      /*1. background color */
 
         position: relative;      /* (chatgpt) to make the dropdown option visible */
-        z-index: 2000;           /* (chatgpt) higher than project cards */
+        z-index: 1;           /* (chatgpt) higher than project cards */
         overflow: visible;       /* (chatgpt) make the option bar not overlap */
 
         /* Add this to ensure proper spacing below fixed header */
