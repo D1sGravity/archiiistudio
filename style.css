@@ -210,6 +210,9 @@ ul li:hover ul.dropdown-options{
     text-align: center;
     color: #fff;
     padding-top: 80px;
+
+    margin-bottom: 0;       /** tell the browser that there's no need extra space for text so it won't show grey space betwween hero and about sections **/
+    padding-bottom: 0;      /** tell the browser that there's no need extra space for text so it won't show grey space betwween hero and about sections **/
 }
 
 .hero-content {
@@ -262,6 +265,8 @@ ul li:hover ul.dropdown-options{
 .about {
     padding: 100px 0;
     background-color: #fff;
+
+    margin-top: 0;      /** tell the browser that there's no need extra space for text so it won't show grey space betwween hero and about sections **/
 }
 
 .about-content {

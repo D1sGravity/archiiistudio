@@ -49,6 +49,8 @@ body {
 
 
 
+
+
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -128,6 +130,22 @@ nav {
 }
 
 
+
+/* Hide Subtext (-Architecture Studio) */
+@media screen and (max-width: 930px) {
+  .logo .subtext {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .logo-button {
+   color:#628e9c;
+  }
+}
+
+
+
 /* ...Projects-container-responsive... */
     
             /*...Destop...*/
@@ -141,28 +159,42 @@ nav {
             .projects-container {
                 display: flex;
                 flex-direction: column;
-                
             }
-                
             }
 
                 /*...Mobile...*/
+                @media (max-width: 925px) {
+                .project-menu-bar-card {
+                    margin-top: 250px;          /* header height on mobile */
+                }
+                }
+
 
     /*...1.Project Header Options...*/
     .project-menu-bar-card {
         width: 100%;
-        margin : 5px auto 0 auto;
-
+        margin: calc(60px + 20px) auto 0 auto;
+        padding-bottom: 25px;
+        
         display: grid;
         grid-template-columns: repeat(auto-fit, 150px);
 
-        padding-top: 75px;
-        padding-bottom: 25px;
-
         justify-content: center;
+        
         gap: 20px;
+        background-color: rgba(0,0,0,0);                      /*1. background color */
 
-        background-color: rgba(0);                      /*1. background color */
+        position: relative;      /* (chatgpt) to make the dropdown option visible */
+        z-index: 2000;           /* (chatgpt) higher than project cards */
+        overflow: visible;       /* (chatgpt) make the option bar not overlap */
+
+        /* Add this to ensure proper spacing below fixed header */
+        top: 0px; /* Adjust this value based on your header height */
+    }
+
+    /* Alternative more reliable approach - add this instead of the above top property */
+    .project-menu-bar-card {
+        margin-top: 80px; /* Header height + some spacing */
     }
 
     .project-selection {
@@ -183,6 +215,29 @@ nav {
         transition: transform 0.3s;
     }
 
+    .project-button-2 {
+        position: relative; /* Ensure dropdown is positioned relative to this */
+    }
+    
+    .project-button-1 :hover
+    .project-button-2 :hover,
+    .project-button-3 :hover {
+        color: #628e9c;
+    }
+    .project-1-option,
+    .project-2-option,
+    .project-3-option {
+        text-decoration: none;
+        color: #2c3e50;
+    }
+
+    .dropdown-options {
+        list-style-type: none;
+        text-align: left;
+        font-size: 15px;
+
+    }
+
     /*--Project Option Hover--*/
     .project-button-1:hover,
     .project-button-2:hover,
@@ -192,8 +247,34 @@ nav {
         transform: scale(1.02);
     }
 
-    .project-button-2 ul li{
-        display: hidden;
+    .project-button-2 ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 10px 0;
+        z-index: 1001;
+    }   
+
+    .project-button-2:hover ul {
+        display: block;
+    }
+
+    .project-button-2 ul li {
+        padding: 8px 20px;
+        white-space: nowrap;
+    }
+
+    .project-button-2 ul li a {
+        color: var(--dark);
+        text-decoration: none;
+    }
+
+    .project-button-2 ul li a:hover {
+        color: var(--secondary);
     }
 
 
@@ -209,7 +290,7 @@ nav {
         border: 1px solid none;
         background-color: rgba(0);                          /*2. background color */
         border: 1px solid rgba(0);
-        
+        margin-top: -30px;
     }
 
         /*... First-Container...*/
@@ -406,7 +487,12 @@ nav {
 }
 
 
-
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding-bottom: 60px; /* even bigger gap for mobile */
+  }
+}
 
 
 
