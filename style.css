@@ -35,9 +35,8 @@ h1, h2, h3, h4 {
 
 .background-video video {
     width: 100%;
-    height: auto;                   /* Let height adjust automatically */
-    max-height: 115vh;              /* Stay within the viewport height */
-    object-fit: contains;           /* Maintain full video inside container */
+    height: 100vh;                   /* Let height adjust automatically */            
+    object-fit: cover;           /* Maintain full video inside container */
     position: absolute;
     top: 0;
     left: 0;
