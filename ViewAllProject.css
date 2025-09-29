@@ -237,6 +237,13 @@ nav {
         font-size: 15px;
     }
 
+
+    /* Show on toggle */
+    .dropdown-options.show {
+    display: block;
+    }
+
+
     /*--Project Option Hover--*/
     .project-button-1:hover,
     .project-button-2:hover,
