@@ -189,10 +189,17 @@ ul li:hover ul.dropdown-options{
     cursor: pointer;
 }
 
+/* Hide Subtext (-Architecture) */
+@media screen and (max-width: 930px) {
+  .logo .subtext {
+    display: none;  
+  }
+}
+
 /* Hero Section */
 .background-video {
     position: absolute;
-    top: 0;
+    top: 26px;
     left: 0;
     width: 100%;
     height: 100%;
