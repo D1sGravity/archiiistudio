@@ -196,6 +196,14 @@ ul li:hover ul.dropdown-options{
   }
 }
 
+/* Hide Subtext (-Architecture) */
+@media screen and (max-width: 930px) {
+  .location-link-text-color {
+    width: 300px;
+    height: auto;  
+  }
+}
+
 /* Hero Section */
 .background-video {
     position: absolute;
