@@ -583,9 +583,35 @@ ul li:hover ul.dropdown-options{
         z-index: 0;
     }
 
+     /*--Back of the Card--*/
+    .card-back-2 {
+        transform: rotateY(180deg);
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+
+        padding-top: 25px;
+        gap: 10px;
+        background-color: #fff;
+    }
+
+    .rufa-background-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        width: 80%;
+        opacity: 15%;
+        z-index: 0;
+    }
+
+    
+
     .team-img-1,
     .team-img-2,
-    .team-img-3 {
+    .team-img-3, 
+    .team-img-4,
+    .team-img-5,
+    .team-img-6 {
         width: 75px;
         height: 75px;
         margin-left: 25px;
@@ -596,6 +622,30 @@ ul li:hover ul.dropdown-options{
         border: 3px solid rgba(101, 2, 2, 0.8);
         box-shadow: 0 5px 10px rgba(101, 2, 2, 0.3);
     }
+
+
+     /*--- Mr.Lideth profile back-card border style---*/
+    .team-img-5{
+        width: 75px;
+        height: 75px;
+        margin-left: 25px;
+
+        border-radius: 0 0 50% 50%;                 /*--- Profile back-card border style---*/
+        object-fit: cover;
+
+        border: 3px solid rgba(39, 52, 139, 0.8);
+        box-shadow: 0 5px 10px rgba(39, 52, 139, 0.3);
+    }
+       .norton-background-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        width: 60%;
+        opacity: 15%;
+        z-index: 0;
+    }
+    
 
     .card-back h3 {                                /*--- University Name ---*/
         font-size: 15px;
@@ -613,6 +663,24 @@ ul li:hover ul.dropdown-options{
         padding-left: 20px;
         color: rgba(101, 2, 2, 0.7);
     }
+
+    .card-back-name-2 {                              /*--- Studs Name ---*/
+        font-size: 15px;
+        font-style: 200;
+        font-family: 'Bokor', fantasy;
+        margin-right: 25px;
+        text-align: center;
+        padding-left: 20px;
+        color: rgba(39, 52, 139, 0.7);
+    }
+    
+    .card-back-2 h3 {                                /*--- University Name ---*/
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgba(39, 52, 139, 0.8);
+        text-shadow: 0 5px 10px rgba(39, 52, 139, 0.3);
+    }
+
 
     .generation {
         font-size: 15px;
