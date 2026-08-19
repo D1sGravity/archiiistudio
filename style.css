@@ -1864,3 +1864,85 @@ header {
         border-radius: 8px;
     }
 }
+
+
+/* =========================================================
+   FINAL TEAM CARD RESPONSIVE FIX
+   Prevent fixed-width team cards from overflowing on phones/tablets.
+   ========================================================= */
+.team-grid {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+.team-member {
+    width: min(350px, 100%);
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Inner-card,
+.card-front,
+.card-back {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .team {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .team .container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .team-grid {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .team-member {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .team .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .team-member {
+        width: 100%;
+        max-width: 100%;
+        height: 400px;
+    }
+
+    .card-front,
+    .card-back {
+        padding: 18px;
+    }
+}
