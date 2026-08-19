@@ -1645,3 +1645,92 @@ header {
         padding-right: 20px !important;
     }
 }
+
+
+/* =========================================================
+   HERO COUNTER — FINAL DESKTOP POSITION
+   The feature strip is 185px tall, so keep the 01—03 counter
+   clearly above it instead of letting the strip cover it.
+   ========================================================= */
+
+@media (min-width: 769px) {
+    .hero {
+        position: relative !important;
+    }
+
+    .hero-services {
+        bottom: 0 !important;
+        min-height: 185px !important;
+        z-index: 10 !important;
+    }
+
+    .hero-counter {
+        position: absolute !important;
+        right: 7vw !important;
+        bottom: 215px !important;
+        top: auto !important;
+        z-index: 100 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        height: 24px !important;
+        padding: 0 4px !important;
+        white-space: nowrap !important;
+        color: rgba(255,255,255,0.85) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .hero-counter .current,
+    .hero-counter > span:last-child {
+        position: relative !important;
+        z-index: 101 !important;
+        color: #fff !important;
+        line-height: 24px !important;
+    }
+
+    .hero-counter .counter-line,
+    .hero-counter .counter-line::before {
+        position: relative !important;
+        z-index: 101 !important;
+        display: block !important;
+        width: 58px !important;
+        height: 1px !important;
+        background: rgba(255,255,255,0.8) !important;
+    }
+}
+
+/* On tablets/phones the services are below the hero, so the counter
+   doesn't need to occupy the service strip area. */
+@media (max-width: 768px) {
+    .hero-counter {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL MOBILE HERO HEIGHT FIX
+   Remove the accidental 250px bottom padding that created the
+   large empty area between the hero button and services.
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .hero-content {
+        box-sizing: border-box !important;
+        min-height: 620px !important;
+        padding: 125px 25px 65px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        box-sizing: border-box !important;
+        min-height: 570px !important;
+        padding: 110px 20px 65px !important;
+    }
+
+    .hero-services {
+        margin-top: 0 !important;
+    }
+}
