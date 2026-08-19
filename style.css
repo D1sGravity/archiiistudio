@@ -1734,3 +1734,49 @@ header {
         margin-top: 0 !important;
     }
 }
+
+
+/* =========================================================
+   RESPONSIVE HERO ARROW
+   Center the next-slide arrow horizontally on phones/tablets.
+   Keep it inside the hero, just above the services section.
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    .hero {
+        position: relative !important;
+    }
+
+    .hero-next {
+        position: absolute !important;
+        left: 50% !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: 22px !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        z-index: 50 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-next {
+        left: 50% !important;
+        right: auto !important;
+        bottom: 20px !important;
+        transform: translateX(-50%) !important;
+        width: 54px !important;
+        height: 54px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-next {
+        left: 50% !important;
+        right: auto !important;
+        bottom: 18px !important;
+        width: 50px !important;
+        height: 50px !important;
+        transform: translateX(-50%) !important;
+    }
+}
