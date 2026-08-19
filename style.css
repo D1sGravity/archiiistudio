@@ -973,3 +973,521 @@ footer {
 
 
 }
+
+/* =========================================================
+   ARCIII PREMIUM HOMEPAGE / HERO REDESIGN
+   ========================================================= */
+
+:root {
+    --primary: #182833;
+    --secondary: #79b6c7;
+    --accent: #79b6c7;
+    --light: #f4f6f6;
+    --dark: #182833;
+    --gray: #7c888d;
+}
+
+/* Transparent architectural-studio header */
+header {
+    background: linear-gradient(to bottom, rgba(8, 20, 27, 0.72), rgba(8, 20, 27, 0));
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    transition: background 0.35s ease, padding 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+header.scrolled {
+    background: rgba(18, 32, 40, 0.94);
+    padding: 14px 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 27px;
+    letter-spacing: -0.5px;
+}
+
+.logo-button,
+.logo-button:visited {
+    color: #fff;
+}
+
+.logo span {
+    color: #9ccbd6;
+}
+
+.nav-links a,
+.nav-links a:visited {
+    color: rgba(255,255,255,0.88);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.btn-dropdown-options {
+    color: rgba(255,255,255,0.88);
+}
+
+.current-lang {
+    color: #fff;
+    border-color: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.05);
+}
+
+.mobile-menu-btn {
+    color: #fff;
+}
+
+/* Full-screen cinematic hero */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    overflow: hidden;
+    background: #13242c;
+}
+
+.background-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.background-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        linear-gradient(90deg, rgba(7, 18, 24, 0.72) 0%, rgba(7, 18, 24, 0.42) 38%, rgba(7, 18, 24, 0.12) 72%, rgba(7, 18, 24, 0.28) 100%),
+        linear-gradient(180deg, rgba(5, 16, 22, 0.25) 0%, rgba(5, 16, 22, 0.05) 55%, rgba(5, 16, 22, 0.58) 100%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    width: min(620px, 48vw);
+    max-width: none;
+    margin: 0;
+    padding: 100px 0 210px max(7vw, calc((100vw - 1200px) / 2));
+}
+
+.hero-eyebrow {
+    margin-bottom: 20px;
+    color: rgba(255,255,255,0.82);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 5.3vw, 5.5rem);
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: -2px;
+}
+
+.hero-divider {
+    width: 58px;
+    height: 2px;
+    margin: 0 0 22px;
+    background: var(--secondary);
+}
+
+.hero p {
+    max-width: 520px;
+    margin: 0 0 30px;
+    color: rgba(255,255,255,0.88);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 175px;
+    padding: 15px 25px;
+    border: 1px solid rgba(121,182,199,0.85);
+    border-radius: 3px;
+    background: var(--secondary);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    transition: transform .3s ease, background .3s ease, border-color .3s ease;
+}
+
+.hero-btn:hover {
+    background: #5e9aaa;
+    border-color: #5e9aaa;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-next {
+    position: absolute;
+    z-index: 4;
+    right: 4.5vw;
+    top: 53%;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255,255,255,0.65);
+    border-radius: 50%;
+    background: rgba(0,0,0,0.08);
+    color: #fff;
+    cursor: pointer;
+    transition: background .3s ease, transform .3s ease;
+}
+
+.hero-next:hover {
+    background: rgba(121,182,199,0.8);
+    transform: translateX(4px);
+}
+
+.hero-counter {
+    position: absolute;
+    z-index: 4;
+    right: 7vw;
+    bottom: 178px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+.hero-counter .current {
+    color: #fff;
+}
+
+.counter-line {
+    display: block;
+    width: 58px;
+    height: 1px;
+    background: rgba(255,255,255,0.7);
+}
+
+/* Service strip shown directly below the hero copy */
+.hero-services {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 185px;
+    padding: 28px max(7vw, calc((100vw - 1200px) / 2)) 25px;
+    gap: 45px;
+    background: rgba(20, 34, 42, 0.93);
+    backdrop-filter: blur(5px);
+}
+
+.hero-service {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 15px;
+    min-width: 0;
+}
+
+.hero-service > i {
+    padding-top: 3px;
+    color: var(--secondary);
+    font-size: 28px;
+}
+
+.hero-service h3 {
+    margin: 0 0 7px;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-service p {
+    margin: 0 0 7px;
+    max-width: 230px;
+    color: rgba(255,255,255,0.68);
+    font-size: 12px;
+    line-height: 1.65;
+}
+
+.hero-service a {
+    color: var(--secondary);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.hero-service a span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform .25s ease;
+}
+
+.hero-service a:hover span {
+    transform: translateX(4px);
+}
+
+/* Keep the rest of the website visually consistent */
+.about,
+.projects,
+.contact {
+    background: #fff;
+}
+
+.services,
+.team {
+    background: #f1f4f4;
+}
+
+.section-title h2,
+.about-text h2 {
+    color: #1d3039;
+}
+
+.service-card,
+.project-card,
+.team-member {
+    box-shadow: 0 12px 35px rgba(20, 40, 50, 0.08);
+}
+
+@media (max-width: 1000px) {
+    .hero-content {
+        width: 60vw;
+        padding-left: 6vw;
+    }
+
+    .hero-services {
+        gap: 20px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .hero-service {
+        grid-template-columns: 1fr;
+        gap: 7px;
+    }
+
+    .hero-service > i {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background: rgba(18, 32, 40, 0.88);
+        padding: 14px 0;
+    }
+
+    .nav-links {
+        background: rgba(18, 32, 40, 0.98);
+    }
+
+    .nav-links a {
+        color: #fff;
+    }
+
+    /* Mobile hero becomes a vertical layout:
+       hero content first, services underneath it. */
+    .hero {
+        min-height: 0;
+        height: auto;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+
+    .background-video {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 620px;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 620px;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        min-height: 620px;
+        padding: 125px 25px 80px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 13vw, 4.5rem);
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        max-width: 520px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-next {
+        right: 22px;
+        top: 45%;
+        width: 42px;
+        height: 42px;
+    }
+
+    .hero-counter {
+        right: 25px;
+        bottom: auto;
+        top: 555px;
+    }
+
+    /* Services are now BELOW the hero instead of beside it. */
+    .hero-services {
+        position: relative;
+        z-index: 4;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 28px 25px;
+        gap: 0;
+        min-height: 0;
+        background: rgba(20, 34, 42, 0.98);
+        backdrop-filter: none;
+    }
+
+    .hero-service {
+        grid-template-columns: 34px 1fr;
+        gap: 14px;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .hero-service:last-child {
+        border-bottom: none;
+    }
+
+    .hero-service > i {
+        padding-top: 2px;
+        font-size: 20px;
+    }
+
+    .hero-service h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .hero-service p {
+        display: block;
+        max-width: none;
+        margin-bottom: 7px;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .hero-service a {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        min-height: 570px;
+        padding: 110px 20px 65px;
+    }
+
+    .background-video,
+    .hero-overlay {
+        height: 570px;
+    }
+
+    .hero h1 {
+        font-size: 3.1rem;
+    }
+
+    .hero-counter {
+        display: none;
+    }
+
+    .hero-services {
+        grid-template-columns: 1fr;
+        padding: 18px 20px;
+    }
+
+    .hero-service {
+        grid-template-columns: 30px 1fr;
+        padding: 18px 0;
+    }
+
+    .hero-service p {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 120px 20px 250px;
+    }
+
+    .hero h1 {
+        font-size: 3.1rem;
+    }
+
+    .hero-services {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-service p {
+        display: block;
+        max-width: none;
+    }
+
+    .hero-counter {
+        display: none;
+    }
+}
