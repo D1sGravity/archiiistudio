@@ -102,14 +102,64 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="background-video">
-            <video autoplay loop muted>
-                <source src="Assets/Exterior/Heang/Modern Villa House.mp4" type="video/mp4"></video>
+            <video autoplay loop muted playsinline>
+                <source src="Assets/Exterior/Heang/Modern Villa House.mp4" type="video/mp4">
+            </video>
         </div>
+
+        <div class="hero-overlay"></div>
+
         <div class="hero-content">
-            <h1>Creating Beautiful Spaces</h1>
+            <div class="hero-eyebrow">ARCIII ARCHITECTURE STUDIO</div>
+            <h1>Creating<br>Beautiful Spaces</h1>
+            <div class="hero-divider"></div>
             <p>From stunning interiors to breathtaking landscapes, we design comprehensive environments that transform your vision into beautiful, functional reality.</p>
-            <div class="divider"></div>
-            <a href="./ViewAllProject" class="btn">View Our Work</a>
+            <a href="./ViewAllProject" class="hero-btn">View Our Work</a>
+        </div>
+
+        <button class="hero-next" type="button" aria-label="Next project">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+
+        <div class="hero-counter" aria-label="Hero slide indicator">
+            <span class="current">01</span>
+            <span class="counter-line"></span>
+            <span>03</span>
+        </div>
+
+        <div class="hero-services">
+            <div class="hero-service">
+                <i class="fas fa-building"></i>
+                <div>
+                    <h3>Architecture</h3>
+                    <p>Innovative design solutions for residential, commercial, and public spaces.</p>
+                    <a href="#services">Learn More <span>→</span></a>
+                </div>
+            </div>
+            <div class="hero-service">
+                <i class="fas fa-couch"></i>
+                <div>
+                    <h3>Interior Design</h3>
+                    <p>Creating functional and beautiful interiors tailored to your lifestyle.</p>
+                    <a href="#services">Learn More <span>→</span></a>
+                </div>
+            </div>
+            <div class="hero-service">
+                <i class="fas fa-tree"></i>
+                <div>
+                    <h3>Landscape Design</h3>
+                    <p>Sustainable landscape solutions that enhance and connect environments.</p>
+                    <a href="#services">Learn More <span>→</span></a>
+                </div>
+            </div>
+            <div class="hero-service">
+                <i class="fas fa-drafting-compass"></i>
+                <div>
+                    <h3>Consultation</h3>
+                    <p>Expert guidance from concept to completion for your project.</p>
+                    <a href="#contact">Learn More <span>→</span></a>
+                </div>
+            </div>
         </div>
     </section>
 
